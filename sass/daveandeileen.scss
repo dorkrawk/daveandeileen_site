@@ -1,0 +1,32 @@
+$green: rgb(143, 174, 70);
+$thick_font: 'Paytone One', sans-serif;
+$thin_font: 'Armata', sans-serif;
+
+body {
+  margin-top: 200px;
+  background-color: $green;
+  text-align: center;
+  font-family: 'Ariel', sans-serif;
+}
+
+.thin {
+  font-family: $thin_font;
+  font-size: 30px;
+}
+.thick {
+  font-family: $thick_font;
+  font-size: 60px;
+}
+.main {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sub {
+  color: #576b27;
+  margin-left: auto;
+  margin-right: auto;
+}
+.person_icon {
+  font-size: 40px;
+}

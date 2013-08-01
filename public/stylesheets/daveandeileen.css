@@ -1,0 +1,26 @@
+body {
+  margin-top: 200px;
+  background-color: #8fae46;
+  text-align: center;
+  font-family: 'Ariel', sans-serif; }
+
+.thin {
+  font-family: "Armata", sans-serif;
+  font-size: 30px; }
+
+.thick {
+  font-family: "Paytone One", sans-serif;
+  font-size: 60px; }
+
+.main {
+  color: white;
+  margin-left: auto;
+  margin-right: auto; }
+
+.sub {
+  color: #576b27;
+  margin-left: auto;
+  margin-right: auto; }
+
+.person_icon {
+  font-size: 40px; }
