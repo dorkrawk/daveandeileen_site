@@ -1,8 +1,16 @@
 {
   "facts" : [
     {
-      "id" : 1,
+      "id" : 0,
       "fact" : "Dave and Eileen once beat a crab and a lobster in a tag team wrestling match."
-    } 
+    },
+    {
+      "id" : 1,
+      "fact" : "Dave and Eileen were once in an ill-fated band called The Suits."
+    },
+    {
+      "id" : 2,
+      "fact" : "Dave and Eileen have a totally awesome cat named Chairman Meow."
+    }  
   ]
 }
