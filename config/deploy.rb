@@ -1,3 +1,6 @@
+require "rvm/capistrano"
+require "bundler/capistrano"
+
 set :application, "daveandeileen_site"
 set :repository,  "https://github.com/dorkrawk/daveandeileen_site.git"
 
@@ -10,7 +13,7 @@ role :web, "zoidberg"                          # Your HTTP server, Apache/etc
 #role :db,  "your slave db-server here"
 
 set :deploy_to, "/var/www/daveandeileen"
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 
 set :user, "dave"
 # Don't use sudo when running the commands

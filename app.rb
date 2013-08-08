@@ -15,12 +15,22 @@ module DaveAndEileen
       haml :aboutus
     end
 
+    get '/party_animals' do
+      @page_title = "The Wedding Party"
+      haml :party
+    end
+
+    get '/parade' do
+      @page_title = "Wedding Parade!"
+      haml :parade
+    end
+
     get '/photos' do 
       @page_title = "Photos"
       haml :photos
     end
 
-    get '/fact/:id' do
+    get '/facts/:id' do
       @page_title = "Facts..."
       the_facts = Facts.new
       if is_i?(params[:id])

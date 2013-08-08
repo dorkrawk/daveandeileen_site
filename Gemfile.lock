@@ -32,6 +32,8 @@ GEM
     rack-protection (1.5.0)
       rack
     redcarpet (3.0.0)
+    rvm-capistrano (1.4.1)
+      capistrano (>= 2.0.0)
     sass (3.2.10)
     shotgun (0.9)
       rack (>= 1.0)
@@ -50,11 +52,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano
   compass
   haml
   json
   redcarpet
+  rvm-capistrano
   sass
   shotgun
   sinatra

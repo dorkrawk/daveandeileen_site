@@ -11,6 +11,30 @@
     {
       "id" : 2,
       "fact" : "Dave and Eileen have a totally awesome cat named Chairman Meow."
-    }  
+    },
+    {
+      "id" : 3,
+      "fact" : "Dave and Eileen had their first date in Bali."
+    },
+    {
+      "id" : 4,
+      "fact" : "Dave wrote a song about Eileen for his old band before they started dating."
+    },
+    {
+      "id" : 5,
+      "fact" : "Dave and Eileen had their first kiss on New Years Eve."
+    },
+    {
+      "id" : 6,
+      "fact" : "Dave and Eileen sometimes write music together under the band name, Packets and Waves."
+    },
+    {
+      "id" : 7,
+      "fact" : "Dave and Eileen were both in the old Captain Planet cartoon back when they were childern (and cartoons)."
+    },
+    {
+      "id" : 8,
+      "fact" : "If Dave and Eileen were a celebrity couple they would probably be crazy and intollerable."
+    }
   ]
 }
