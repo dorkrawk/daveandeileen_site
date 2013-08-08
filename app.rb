@@ -15,6 +15,11 @@ module DaveAndEileen
       haml :aboutus
     end
 
+    get '/photos' do 
+      @page_title = "Photos"
+      haml :photos
+    end
+
     get '/fact/:id' do
       @page_title = "Facts..."
       the_facts = Facts.new
