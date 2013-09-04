@@ -1,26 +1,63 @@
 body {
-  margin-top: 200px;
-  background-color: #8fae46;
+  background-image: url("../images/clouds_bg.jpg");
+  background-color: #77939e;
+  font-family: 'Ariel', sans-serif;
+}
+
+header {
   text-align: center;
-  font-family: 'Ariel', sans-serif; }
+}
 
-.thin {
-  font-family: "Armata", sans-serif;
-  font-size: 30px; }
+nav {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-.thick {
-  font-family: "Paytone One", sans-serif;
-  font-size: 60px; }
+footer {
+  clear: both;
+}
 
-.main {
-  color: white;
+a {
+  color: #77939e;
+  text-decoration: none;
+}
+
+#shell {
+  background-color: #f9f9f9;
+  width: 900px;
+  padding: 50px;
+  margin-top: 120px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
 
-.sub {
-  color: #576b27;
-  margin-left: auto;
-  margin-right: auto; }
+#title {
+  font-size: 60px;
+  color: #77939e;
+  font-weight: bold;
+}
 
-.person_icon {
-  font-size: 40px; }
+ul.nav li {
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#main_content {
+  width: 72%;
+  float: left;
+  margin-right: 20px;
+}
+
+#sidebar {
+  width: 25%;
+  float: left;
+}
+
+.clear {
+  clear: both;
+}

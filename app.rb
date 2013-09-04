@@ -15,6 +15,11 @@ module DaveAndEileen
       haml :aboutus
     end
 
+    get '/backstory' do
+      @page_title = "About Dave and Eileen"
+      haml :backstory
+    end
+
     get '/party_animals' do
       @page_title = "The Wedding Party"
       haml :party

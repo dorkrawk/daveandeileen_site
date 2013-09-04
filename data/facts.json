@@ -14,7 +14,7 @@
     },
     {
       "id" : 3,
-      "fact" : "Dave and Eileen had their first date in Bali."
+      "fact" : "Dave and Eileen had their first date in Bali, Indonesia."
     },
     {
       "id" : 4,
@@ -34,7 +34,11 @@
     },
     {
       "id" : 8,
-      "fact" : "If Dave and Eileen were a celebrity couple they would probably be crazy and intollerable."
+      "fact" : "If Dave and Eileen were a celebrity couple they would probably be crazy and intolerable."
+    },
+    {
+      "id" : 9,
+      "fact" : "Eileen is sometimes refered to as 'The Yoko Ono of The American Autumn'."
     }
   ]
 }

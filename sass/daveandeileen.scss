@@ -1,32 +1,69 @@
-$green: rgb(143, 174, 70);
-$thick_font: 'Paytone One', sans-serif;
-$thin_font: 'Armata', sans-serif;
+@import "compass/css3";
+
+$blueish: #77939e;
+$whiteish: #f9f9f9;
 
 body {
-  margin-top: 200px;
-  background-color: $green;
-  text-align: center;
+  background-image: url("../images/clouds_bg.jpg");
+  background-color: $blueish;
   font-family: 'Ariel', sans-serif;
 }
 
-.thin {
-  font-family: $thin_font;
-  font-size: 30px;
+header {
+  text-align: center;
 }
-.thick {
-  font-family: $thick_font;
+
+nav {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+footer {
+  clear: both;
+}
+
+a {
+  color: $blueish;
+  text-decoration: none;
+}
+
+#shell {
+  background-color: $whiteish;
+  width: 900px;
+  padding: 50px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include single-box-shadow;
+}
+
+#title {
   font-size: 60px;
+  color: $blueish;
+  font-weight: bold;
 }
-.main {
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
+
+ul.nav {
+  li {
+    list-style: none;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
-.sub {
-  color: #576b27;
-  margin-left: auto;
-  margin-right: auto;
+
+#main_content {
+  width: 72%;
+  float: left;
+  margin-right: 20px;
 }
-.person_icon {
-  font-size: 40px;
+
+#sidebar {
+  width: 25%;
+  float: left;
+}
+
+.clear {
+  clear: both;
 }

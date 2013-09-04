@@ -6,4 +6,14 @@
     %link(rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css")
     %link(rel="stylesheet" type="text/css" href="../stylesheets/daveandeileen.css")
   %body
-    = yield
+    #shell
+      %header
+        #title Dave + Eileen
+      %nav
+        = haml :_nav
+        %br.clear
+      #main_content
+        = yield
+      #sidebar
+        = haml :_sidebar
+      %footer
