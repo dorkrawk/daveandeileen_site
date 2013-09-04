@@ -2,11 +2,13 @@
 
 $blueish: #77939e;
 $whiteish: #f9f9f9;
+$blackish: #333;
 
 body {
   background-image: url("../images/clouds_bg.jpg");
   background-color: $blueish;
   font-family: 'Ariel', sans-serif;
+  color: $blackish;
 }
 
 header {

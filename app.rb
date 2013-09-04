@@ -51,5 +51,16 @@ module DaveAndEileen
     def is_i?(word)
       !!(word =~ /^[-+]?[0-9]+$/)
     end
+
+    @@the_subtitles = [
+                      "Matrimony and cheese!",
+                      "Engaged AND engaging...",
+                      "We're mainly doing this for the cake.",
+                      "Taking names AND taking vows!"
+                    ]
+
+    def get_subtitle
+      @@the_subtitles.sample
+    end
   end
 end
