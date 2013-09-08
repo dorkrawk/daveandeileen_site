@@ -53,14 +53,20 @@ module DaveAndEileen
     end
 
     @@the_subtitles = [
-                      "Matrimony and cheese!",
-                      "Engaged AND engaging...",
-                      "We're mainly doing this for the cake.",
-                      "Taking names AND taking vows!"
+                      "are entering the bonds of matrimony and cheese",
+                      "are totally getting married",
+                      "are taking names and taking vows",
+                      "are getting hitched",
+                      "are tying the knot",
+                      "are saying 'I do' (and maybe some other words)"
                     ]
 
     def get_subtitle
       @@the_subtitles.sample
+    end
+
+    def countdown
+      "12 months"
     end
   end
 end

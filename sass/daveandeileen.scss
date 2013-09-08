@@ -2,6 +2,7 @@
 
 $blueish: #77939e;
 $whiteish: #f9f9f9;
+$tanish: #cec1b0;
 $blackish: #333;
 
 body {
@@ -32,7 +33,7 @@ a {
 #shell {
   background-color: $whiteish;
   width: 900px;
-  padding: 50px;
+  padding: 30px 50px 50px 50px;
   margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
@@ -41,15 +42,23 @@ a {
 }
 
 #title {
-  font-size: 60px;
+  font-size: 80px;
   color: $blueish;
   font-weight: bold;
+  font-family: 'Paytone One', sans-serif;
+}
+
+#subtitle {
+  color: $tanish;
+  font-size: 30px;
+  font-family: 'Neuton', serif;
+  margin-top: -10px;
 }
 
 ul.nav {
   li {
     list-style: none;
-    float: left;
+    display: inline;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -68,4 +77,29 @@ ul.nav {
 
 .clear {
   clear: both;
+}
+
+.party_label {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.party_member {
+  margin-bottom: 20px;
+
+  .name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .title {
+    color: $tanish;
+  }
+
+  .party_photo {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
 }

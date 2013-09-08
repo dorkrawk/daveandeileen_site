@@ -2,16 +2,22 @@
 %html
   %head
     %title Dave+Eileen
-    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Armata|Paytone+One")
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Paytone+One")
     %link(rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css")
     %link(rel="stylesheet" type="text/css" href="../stylesheets/daveandeileen.css")
+    %link(href="http://fonts.googleapis.com/css?family=Neuton" rel="stylesheet" type="text/css")
   %body
     #shell
       %header
-        #title Dave + Eileen
-        #subtitle= get_subtitle
+        %a(href="../" title="Dave + Eileen")
+          #title Dave + Eileen
+        #subtitle
+          = get_subtitle 
+          in 
+          = countdown
       %nav
-        = haml :_nav
+        #nav_box
+          = haml :_nav
         %br.clear
       #main_content
         = yield
