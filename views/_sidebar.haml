@@ -1,3 +1,9 @@
-latest blog
+%h3
+  latest blog
+%ul
+- @blog_posts.each do |p|
+  %li
+    %a(href="#{p.url}" title="by #{p.author}") #{p.title}
 
-tweets
+%h3
+  tweets
