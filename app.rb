@@ -80,7 +80,9 @@ module DaveAndEileen
     end
 
     def countdown
-      "12 months"
+      wedding_date = DateTime.new(2014,8,2)
+      days = (wedding_date - DateTime.now).to_i
+      "#{days} days"
     end
   end
 end

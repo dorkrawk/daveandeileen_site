@@ -28,6 +28,7 @@ a {
   width: 900px;
   padding: 30px 50px 50px 50px;
   margin-top: 120px;
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-shadow: 0px 0px 5px #333333;
@@ -44,8 +45,8 @@ a {
 
 #subtitle {
   color: #cec1b0;
-  font-size: 30px;
-  font-family: 'Neuton', serif;
+  font-size: 24px;
+  /* font-family: 'Neuton', serif; */
   margin-top: -10px;
 }
 
@@ -54,6 +55,10 @@ ul.nav li {
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+ul.blog_posts li {
+  list-style: none;
 }
 
 #main_content {
