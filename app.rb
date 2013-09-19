@@ -39,19 +39,8 @@ module DaveAndEileen
 
     get '/facts/:id' do
       @page_title = "Facts..."
-      the_facts = Facts.new
-      if is_i?(params[:id])
-        @fact_id = Integer(params[:id])
-      else
-        # get random fact
-        @fact_id = (0..the_facts.count-1).to_a.sample
-      end
-      @fact = the_facts.get_fact(@fact_id)
+      @fact = a_fact(params[:id])
       haml :fact
-    end
-
-    def is_i?(word)
-      !!(word =~ /^[-+]?[0-9]+$/)
     end
 
     @@the_subtitles = [
@@ -82,6 +71,21 @@ module DaveAndEileen
       def blog_posts
         d_and_e_blog = Blog.new
         d_and_e_blog.get_posts
+      end
+
+      def is_i?(word)
+        !!(word =~ /^[-+]?[0-9]+$/)
+      end
+
+      def a_fact(id)
+        the_facts = Facts.new
+        if is_i?(id)
+          @fact_id = Integer(id)
+        else
+          # get random fact
+          @fact_id = (0..the_facts.count-1).to_a.sample
+        end
+        the_facts.get_fact(@fact_id)
       end
     end
   end
