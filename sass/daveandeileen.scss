@@ -1,6 +1,7 @@
 @import "compass/css3";
 
 $blueish: #77939e;
+$light_bluish: #a4b6be; 
 $whiteish: #f9f9f9;
 $tanish: #cec1b0;
 $blackish: #333;
@@ -30,8 +31,15 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: $light_bluish;
+}
+
 #shell {
   background-color: $whiteish;
+  background-image: url("../images/dave_and_eileen_logo.png");
+  background-position: center 30px;
+  background-repeat: no-repeat;
   width: 900px;
   padding: 30px 50px 50px 50px;
   margin-top: 120px;
@@ -43,20 +51,29 @@ a {
 }
 
 #title {
-  font-size: 80px;
-  color: $blueish;
-  font-weight: bold;
-  font-family: 'Paytone One', sans-serif;
+  width: 600px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #subtitle {
-  color: $tanish;
-  font-size: 24px;
-  /* font-family: 'Neuton', serif; */
+  color: $blackish;
+  font-size: 20px;
   margin-top: -10px;
 }
 
+
+ul {
+  li {
+    list-style: none;
+    margin-left: -30px;
+  }
+}
+
 ul.nav {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 22px;
   li {
     list-style: none;
     display: inline;
@@ -65,10 +82,8 @@ ul.nav {
   }
 }
 
-ul.blog_posts {
-  li {
-    list-style: none;
-  }
+.blog_date {
+  font-weight: bold;
 }
 
 #main_content {

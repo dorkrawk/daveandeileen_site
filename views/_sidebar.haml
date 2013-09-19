@@ -1,9 +1,18 @@
 %h3
   latest blog
 %ul.blog_posts
-- @blog_posts.each do |p|
-  %li
-    %a(href="#{p.url}" title="by #{p.author}") #{p.title}
+  - blog_posts.each do |p|
+    %li
+      %span.blog_date 
+        = p.published.strftime("%b %d %Y")
+      %a(href="#{p.url}" title="by #{p.author}") #{p.title}
 
 %h3
   other Dave + Eileen stuff
+%ul
+  %li
+    %a(href="http://dinosaurseateverybody.com" title="Dinosaurs Eat Everybody") Dinosaurs Eat Everybody
+  %li
+    %a(href="http://mountsaintawesome.com" title="Mount Saint Awesome") Mount Saint Awesome
+  %li
+    %a(href="http://eileenhays.com/" title="Urban Neo-Hippie") Urban Neo-Hippie

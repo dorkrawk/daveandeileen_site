@@ -5,47 +5,40 @@ require './models/blog'
 
 module DaveAndEileen
   class App < Sinatra::Base
-    d_and_e_blog = Blog.new
+
     # routes
     get '/' do
       @page_title = "index"
-      @blog_posts = d_and_e_blog.get_posts
       haml :index
     end
 
     get '/aboutus' do
       @page_title = "About Dave and Eileen"
-      @blog_posts = d_and_e_blog.get_posts
       haml :aboutus
     end
 
     get '/backstory' do
       @page_title = "About Dave and Eileen"
-      @blog_posts = d_and_e_blog.get_posts
       haml :backstory
     end
 
     get '/party_animals' do
       @page_title = "The Wedding Party"
-      @blog_posts = d_and_e_blog.get_posts
       haml :party
     end
 
-    get '/parade' do
-      @page_title = "Wedding Parade!"
-      @blog_posts = d_and_e_blog.get_posts
-      haml :parade
+    get '/details' do
+      @page_title = "Wedding Details"
+      haml :details
     end
 
     get '/photos' do 
       @page_title = "Photos"
-      @blog_posts = d_and_e_blog.get_posts
       haml :photos
     end
 
     get '/facts/:id' do
       @page_title = "Facts..."
-      @blog_posts = d_and_e_blog.get_posts
       the_facts = Facts.new
       if is_i?(params[:id])
         @fact_id = Integer(params[:id])
@@ -71,7 +64,7 @@ module DaveAndEileen
                       "are better off wed",
                       "are wandering down the aisle",
                       "are joining forces",
-                      "are altering their lives",
+                      "are altaring their lives",
                       "are merging their resources"
                     ]
 
@@ -83,6 +76,13 @@ module DaveAndEileen
       wedding_date = DateTime.new(2014,8,2)
       days = (wedding_date - DateTime.now).to_i
       "#{days} days"
+    end
+
+    helpers do
+      def blog_posts
+        d_and_e_blog = Blog.new
+        d_and_e_blog.get_posts
+      end
     end
   end
 end
