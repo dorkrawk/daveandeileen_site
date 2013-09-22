@@ -8,7 +8,16 @@
       %a(href="#{p.url}" title="by #{p.author}") #{p.title}
 
 %h3
-  other Dave + Eileen stuff
+  twitter
+%ul.tweets
+  - tweets.each do |t|
+    %li
+      %a(href="http://twitter.com/#{t.user.screen_name}" title="#{t.user.screen_name}")
+        %img(src="#{t.profile_image_url}" class="tweet_icon")
+      = nice_tweet(t.text)
+
+%h3
+  other stuff
 %ul
   %li
     %a(href="http://dinosaurseateverybody.com" title="Dinosaurs Eat Everybody") Dinosaurs Eat Everybody

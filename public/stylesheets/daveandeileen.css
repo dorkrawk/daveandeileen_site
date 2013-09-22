@@ -51,7 +51,7 @@ a:hover {
 }
 
 #subtitle {
-  color: #333333;
+  color: #887d6e;
   font-size: 20px;
   margin-top: -10px;
 }
@@ -76,6 +76,21 @@ ul.nav li {
   font-weight: bold;
 }
 
+ul.tweets {
+  font-size: 12px;
+}
+ul.tweets li {
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.tweet_icon {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  clear: both;
+}
+
 #main_content {
   width: 72%;
   float: left;
@@ -85,6 +100,11 @@ ul.nav li {
 #sidebar {
   width: 25%;
   float: left;
+}
+#sidebar h3 {
+  color: #887d6e;
+  font-size: 26px;
+  font-family: 'Paytone One', sans-serif;
 }
 
 .clear {
@@ -105,7 +125,7 @@ ul.nav li {
   font-size: 20px;
 }
 .party_member .title {
-  color: #cec1b0;
+  color: #887d6e;
 }
 .party_member .party_photo {
   float: left;

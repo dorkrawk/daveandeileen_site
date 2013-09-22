@@ -1,10 +1,16 @@
 require 'sinatra/base'
 require 'haml'
+require 'twitter-text'
+require './models/twitter'
 require './models/facts'
 require './models/blog'
+require './env' if File.exists?('env.rb')
+
+include Twitter::Autolink
 
 module DaveAndEileen
   class App < Sinatra::Base
+    @@wedding_date = DateTime.new(2014,8,2)
 
     # routes
     get '/' do
@@ -62,12 +68,25 @@ module DaveAndEileen
     end
 
     def countdown
-      wedding_date = DateTime.new(2014,8,2)
-      days = (wedding_date - DateTime.now).to_i
+      days = (@@wedding_date - DateTime.now).to_i
       "#{days} days"
     end
 
+    def countdown_exact
+
+    end 
+
     helpers do
+      def tweets
+        our_twitters = ["dorkrawk", "leenbeener"]
+        twitter = BirdBlender.new(our_twitters, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET'], ENV['TWITTER_OAUTH_TOKEN'], ENV['TWITTER_OAUTH_TOKEN_SECRET'])
+        twitter.tweets
+      end
+
+      def nice_tweet(tweet)
+        auto_link(tweet)
+      end 
+
       def blog_posts
         d_and_e_blog = Blog.new
         d_and_e_blog.get_posts

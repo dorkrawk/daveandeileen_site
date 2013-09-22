@@ -7,6 +7,7 @@ gem 'sass'
 gem 'haml'
 gem 'redcarpet'
 gem 'twitter'
+gem 'twitter-text'
 gem 'json'
 gem 'feedzirra'
 

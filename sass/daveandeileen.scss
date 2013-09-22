@@ -4,6 +4,7 @@ $blueish: #77939e;
 $light_bluish: #a4b6be; 
 $whiteish: #f9f9f9;
 $tanish: #cec1b0;
+$dark_tanish: #887d6e;
 $blackish: #333;
 
 body {
@@ -58,7 +59,7 @@ a:hover {
 }
 
 #subtitle {
-  color: $blackish;
+  color: $dark_tanish;
   font-size: 20px;
   margin-top: -10px;
 }
@@ -86,6 +87,21 @@ ul.nav {
   font-weight: bold;
 }
 
+ul.tweets {
+  font-size: 12px;
+  li {
+    clear: both;
+    margin-bottom: 10px;
+  }
+}
+
+.tweet_icon {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  clear: both;
+}
+
 #main_content {
   width: 72%;
   float: left;
@@ -95,6 +111,12 @@ ul.nav {
 #sidebar {
   width: 25%;
   float: left;
+
+  h3 {
+    color: $dark_tanish;
+    font-size: 26px;
+    font-family: 'Paytone One', sans-serif;
+  }
 }
 
 .clear {
@@ -116,7 +138,7 @@ ul.nav {
   }
 
   .title {
-    color: $tanish;
+    color: $dark_tanish;
   }
 
   .party_photo {
