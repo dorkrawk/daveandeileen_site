@@ -8,12 +8,20 @@ module DaveAndEileen
     @@feed = Feedzirra::Feed.fetch_and_parse(feed_address)
 
     def get_posts(x=5)
-      num_posts = [x, @@feed.entries.count].min
-      @@feed.entries.take(num_posts)
+      if feed_ok?
+        num_posts = [x, @@feed.entries.count].min
+        @@feed.entries.take(num_posts)
+      else
+        []
+      end
     end 
 
     def num_posts
       @@feed.entries.count
+    end
+
+    def feed_ok?
+      !@@feed.nil?
     end
 
   end

@@ -1,11 +1,16 @@
 %h3
   latest blog
-%ul.blog_posts
-  - blog_posts.each do |p|
-    %li
-      %span.blog_date 
-        = p.published.strftime("%b %d %Y")
-      %a(href="#{p.url}" title="by #{p.author}") #{p.title}
+
+- if blog_posts.count < 1
+  .no_responce
+    Sorry, couldn't find blog posts
+- else
+  %ul.blog_posts
+    - blog_posts.each do |p|
+      %li
+        %span.blog_date 
+          = p.published.strftime("%b %d %Y")
+        %a(href="#{p.url}" title="by #{p.author}") #{p.title}
 
 %h3
   twitter

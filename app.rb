@@ -87,6 +87,10 @@ module DaveAndEileen
         auto_link(tweet)
       end 
 
+      def us_photos
+
+      end
+
       def blog_posts
         d_and_e_blog = Blog.new
         d_and_e_blog.get_posts
