@@ -60,7 +60,10 @@ module DaveAndEileen
                       "are wandering down the aisle",
                       "are joining forces",
                       "are altaring their lives",
-                      "are merging their resources"
+                      "are merging their resources",
+                      "are making honest people out of eachother",
+                      "are fit to be tying the knot",
+                      "are wedlocking it down"
                     ]
 
     def get_subtitle

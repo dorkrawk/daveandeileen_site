@@ -95,6 +95,7 @@ ul.tweets li {
   width: 72%;
   float: left;
   margin-right: 20px;
+  line-height: 1.4em;
 }
 
 #sidebar {
@@ -111,14 +112,25 @@ ul.tweets li {
   clear: both;
 }
 
+h2.page_title {
+  color: #887d6e;
+  font-size: 30px;
+  font-family: 'Paytone One', sans-serif;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+  clear: both;
+}
+
 .party_label {
   font-weight: bold;
   font-size: 30px;
   margin-bottom: 20px;
+  clear: both;
 }
 
 .party_member {
   margin-bottom: 20px;
+  clear: both;
 }
 .party_member .name {
   font-weight: bold;
