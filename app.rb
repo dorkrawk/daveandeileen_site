@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require 'haml'
 require 'twitter-text'
+require 'RMagick'
+include Magick
 require './models/twitter'
 require './models/facts'
 require './models/blog'
@@ -40,6 +42,7 @@ module DaveAndEileen
 
     get '/photos' do 
       @page_title = "Photos"
+      @photos = Dir["./public/images/photos/*"].map {|p| p.sub("/public", "")}
       haml :photos
     end
 
@@ -47,6 +50,14 @@ module DaveAndEileen
       @page_title = "Facts..."
       @fact = a_fact(params[:id])
       haml :fact
+    end
+
+    get '/thumbnail/photos/:file_name' do
+      content_type 'image/jpg'
+      img = Image.read("./public/images/photos/#{params[:file_name]}").first
+      thumb = img.resize_to_fill(150, 150)
+      thumb.format  = 'jpg'
+      thumb.to_blob
     end
 
     @@the_subtitles = [
@@ -88,11 +99,12 @@ module DaveAndEileen
 
       def nice_tweet(tweet)
         auto_link(tweet)
-      end 
-
-      def us_photos
-
       end
+
+      def make_thumb(img_url)
+        img = Image.read(img_url).first
+        img.thumbnail(150, 150)
+      end 
 
       def blog_posts
         d_and_e_blog = Blog.new

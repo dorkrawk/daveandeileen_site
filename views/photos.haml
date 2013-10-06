@@ -1,2 +1,7 @@
 %h2.page_title
   Let's look at pictures!
+
+- @photos.each do |p|
+  - file = File.basename(p)
+  %a(href="#{p}")
+    %img(src="./thumbnail/photos/#{file}" class="thumb_pic")

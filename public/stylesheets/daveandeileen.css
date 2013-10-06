@@ -121,6 +121,10 @@ h2.page_title {
   clear: both;
 }
 
+.thumb_pic {
+  margin: 10px;
+}
+
 .party_label {
   font-weight: bold;
   font-size: 30px;
