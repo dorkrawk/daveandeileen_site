@@ -3,5 +3,5 @@
 
 - @photos.each do |p|
   - file = File.basename(p)
-  %a(href="#{p}")
+  %a(href="#{p}" data-lightbox="photo_gallery")
     %img(src="./thumbnail/photos/#{file}" class="thumb_pic")
