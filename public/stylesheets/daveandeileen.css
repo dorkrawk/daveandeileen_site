@@ -11,7 +11,7 @@ header {
 
 nav {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: -5px;
 }
 
 footer {
@@ -119,6 +119,16 @@ h2.page_title {
   margin-bottom: 20px;
   text-transform: lowercase;
   clear: both;
+}
+
+.dave_head {
+  display: inline;
+  float: right;
+}
+
+.eileen_head {
+  display: inline;
+  float: left;
 }
 
 .thumb_pic {
