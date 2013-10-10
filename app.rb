@@ -6,7 +6,7 @@ include Magick
 require './models/twitter'
 require './models/facts'
 require './models/blog'
-require './env' if File.exists?('env.rb')
+#require './env' if File.exists?('env.rb')
 
 include Twitter::Autolink
 
