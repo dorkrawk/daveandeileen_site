@@ -133,6 +133,14 @@ h2.page_title {
   clear: both;
 }
 
+.eileen_side, .dave_side {
+  margin-bottom: 10px;
+}
+
+.eileen_side {
+  border-bottom: 1px $light_bluish dashed;
+}
+
 .dave_head {
   display: inline;
   float: right;
