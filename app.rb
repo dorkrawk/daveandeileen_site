@@ -56,6 +56,7 @@ module DaveAndEileen
       content_type 'image/jpg'
       img = Image.read("./public/images/photos/#{params[:file_name]}").first
       thumb = img.resize_to_fill(150, 150)
+      thumb.colorspace = Magick::RGBColorspace
       thumb.format  = 'jpg'
       thumb.to_blob
     end
