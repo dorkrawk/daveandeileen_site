@@ -73,7 +73,7 @@ module DaveAndEileen
                       "are joining forces",
                       "are altaring their lives",
                       "are merging their resources",
-                      "are making honest people out of eachother",
+                      "are making honest people out of each other",
                       "are fit to be tying the knot",
                       "are wedlocking it down"
                     ]
