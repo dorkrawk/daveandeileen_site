@@ -2,6 +2,7 @@ require 'twitter'
 
 module DaveAndEileen
   class BirdBlender
+    include Twitter::Autolink
 
     def initialize(accounts, consumer_key, consumer_secret, access_token, access_token_secret)
       Twitter.configure do |config|
