@@ -1,6 +1,9 @@
 %h2.page_title
   Let's look at pictures!
 
+:markdown
+  (engagement pictures by [Nicole Strack](http://www.nicolestrack.com/))
+
 - @photos.each do |p|
   - file = File.basename(p)
   %a(href="#{p}" data-lightbox="photo_gallery")
