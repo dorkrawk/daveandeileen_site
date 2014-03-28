@@ -11,6 +11,7 @@ gem 'twitter-text'
 gem 'json'
 gem 'feedzirra'
 gem 'rmagick'
+gem 'sequel'
 
 group :development do
   gem 'shotgun'  # reloads app code so I don't have to restart Sinatra all the time

@@ -61,6 +61,15 @@ module DaveAndEileen
       thumb.to_blob
     end
 
+    get '/filterfilter' do
+      @hub_challenge = params["hub.challenge"]
+      haml :filterfilter, :layout => false
+    end
+
+    post '/filterfilter' do
+      # do some cool stuff here
+    end
+
     @@the_subtitles = [
                       "are entering the bonds of matrimony and cheese",
                       "are totally getting married",

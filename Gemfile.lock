@@ -61,6 +61,7 @@ GEM
     sass (3.2.12)
     sax-machine (0.1.0)
       nokogiri (> 0.0.0)
+    sequel (4.8.0)
     shotgun (0.9)
       rack (>= 1.0)
     simple_oauth (0.2.0)
@@ -91,6 +92,7 @@ DEPENDENCIES
   rmagick
   rvm-capistrano
   sass
+  sequel
   shotgun
   sinatra
   twitter
