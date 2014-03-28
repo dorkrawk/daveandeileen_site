@@ -62,8 +62,7 @@ module DaveAndEileen
     end
 
     get '/filterfilter' do
-      @hub_challenge = params["hub.challenge"]
-      haml :filterfilter, :layout => false
+      params['hub.challenge']
     end
 
     post '/filterfilter' do
