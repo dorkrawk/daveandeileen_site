@@ -6,6 +6,8 @@ include Magick
 require './models/twitter'
 require './models/facts'
 require './models/blog'
+
+require_relative 'models/filterfilter'
 #require './env' if File.exists?('env.rb')
 
 include Twitter::Autolink
@@ -13,6 +15,10 @@ include Twitter::Autolink
 module DaveAndEileen
   class App < Sinatra::Base
     @@wedding_date = DateTime.new(2014,8,2)
+
+    # stuff to store Instagram photos
+    @@filterFilter = FilterFilter.new
+    @@filter_tag = 'daveandeileen'
 
     # routes
     get '/' do
@@ -66,7 +72,12 @@ module DaveAndEileen
     end
 
     post '/filterfilter' do
-      # do some cool stuff here
+      begin
+        @@filterFilter.get_tagged_photo(@@filter_tag)
+        status 202
+      rescue
+        status 400
+      end
     end
 
     @@the_subtitles = [
