@@ -21,6 +21,9 @@ module DaveAndEileen
     @@filterFilter = FilterFilter.new
     @@filter_tag = 'daveandeileen'
 
+    # BirdWatcher stuff
+    @@birdwatcher = BirdWatcher.new
+
     # routes
     get '/' do
       @page_title = "index"
@@ -82,9 +85,18 @@ module DaveAndEileen
     end
 
     get '/birdwatcher' do
-      @birdwatcher = BirdWatcher.new
+      erb :live_photos, :layout => false
+    end
 
-      haml :live_photos, :layout => false
+    get '/bw_photo' do
+      @photo = @@birdwatcher.lazy_get_photo
+      unless @photo[:name].nil?
+        @the_name = @photo[:name]
+      else
+        @the_name = @photo[:username]
+      end
+      @the_icon = @@birdwatcher.get_service_icon(@photo[:service])
+      erb :bw_photo, :layout => false
     end
 
     @@the_subtitles = [

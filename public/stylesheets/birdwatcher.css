@@ -1,0 +1,33 @@
+/* BirdWatcher photos */
+body {
+  font-family: 'Ariel', sans-serif;
+  color: #77939e;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.bw_photo {
+  margin-bottom: 10px;
+}
+
+.bw_text {
+  font-size: 26px;
+  text-align: left;
+  color: #887d6e;
+}
+
+.bw_name {
+  font-size: 34px;
+  text-align: right;
+  color: #333333;
+}
+
+.photo_shell {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.fa {
+  color: #77939e;
+}

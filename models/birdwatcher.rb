@@ -1,6 +1,8 @@
 require 'sequel'
 
 class BirdWatcher
+  attr_reader :ready
+  attr_reader :photos
 
   def initialize
     db_type = ENV["B_W_DB_TYPE"]
@@ -11,6 +13,20 @@ class BirdWatcher
     # connect to the Birdwatcher DB
     @db = Sequel.connect("#{db_type}://#{db_user}:#{db_pass}@#{db_location}")
 
+    @photos = Hash.new
+    @most_recent_id = 0
+    @new_photos = Hash.new
+
+    @service_icons = {"twitter" => "fa-twitter", "instagram" => "fa-instagram"}
+
+    @ready = false
+  end
+
+  def ready?
+    @ready
+  end
+
+  def start_up
     # pull photos
     current_photos = @db[:photos].select_all
 
@@ -19,6 +35,8 @@ class BirdWatcher
 
     # no new photos yet
     @new_photos = Hash.new
+
+    @ready = true
   end
 
   def update
@@ -40,8 +58,21 @@ class BirdWatcher
     end
   end
 
+  def lazy_get_photo
+    @db[:photos].order{random{}}.first
+  end
+
   def get_photo_json
     photo = get_photo
     photo.to_json
+  end
+
+  def lazy_get_photo_json
+    photo = lazy_get_photo
+    photo.to_json
+  end
+
+  def get_service_icon(service)
+    @service_icons[service] || "fa-camera"
   end
 end
