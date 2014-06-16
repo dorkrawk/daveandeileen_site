@@ -6,6 +6,7 @@ include Magick
 require './models/twitter'
 require './models/facts'
 require './models/blog'
+require './models/birdwatcher'
 
 require_relative 'models/filterfilter'
 #require './env' if File.exists?('env.rb')
@@ -78,6 +79,12 @@ module DaveAndEileen
       rescue
         status 400
       end
+    end
+
+    get '/birdwatcher' do
+      @birdwatcher = BirdWatcher.new
+
+      haml :live_photos, :layout => false
     end
 
     @@the_subtitles = [
