@@ -1,0 +1,20 @@
+<b><%= @photos.count %></b> photos<br />
+<br />
+<table>
+  <tr>
+    <th>id</th>
+    <th>service</th>
+    <th>username</th>
+    <th>name</th>
+    <th>url</th>
+  </tr>
+<% @photos.each do |k, p| %>
+  <tr>
+    <td><%= p[:id] %></td>
+    <td><%= p[:service] %></td>
+    <td><%= p[:username] %></td>
+    <td><%= p[:name] %></td>
+    <td><a href="<%= p[:photo_url] %>"><%= p[:photo_url] %></a></td>
+  </tr>
+<% end %>
+</table>

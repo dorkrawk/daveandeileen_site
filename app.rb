@@ -99,6 +99,12 @@ module DaveAndEileen
       erb :bw_photo, :layout => false
     end
 
+    get '/bw_status' do 
+      @photos = @@birdwatcher.get_all_photos
+
+      erb :bw_status
+    end
+
     @@the_subtitles = [
                       "are entering the bonds of matrimony and cheese",
                       "are totally getting married",

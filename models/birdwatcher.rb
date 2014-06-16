@@ -45,6 +45,12 @@ class BirdWatcher
     @most_recent_id = new_photo_set.max(:id)
   end
 
+  def get_all_photos
+    current_photos = @db[:photos].select_all
+
+    current_photos.to_hash(:id)
+  end
+
   def get_photo
     unless @new_photos.empty?
       # pull a random photo from @new_photos, add it to @photos, remove from @new_photos
