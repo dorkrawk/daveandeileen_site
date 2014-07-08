@@ -19,6 +19,7 @@ module DaveAndEileen
 
     # stuff to store Instagram photos
     @@filterFilter = FilterFilter.new
+    @@filter_tags = ['daveandeileen', 'eileenanddave']
     @@filter_tag = 'daveandeileen'
 
     # BirdWatcher stuff
@@ -77,7 +78,9 @@ module DaveAndEileen
 
     post '/filterfilter' do
       begin
-        @@filterFilter.get_tagged_photo(@@filter_tag)
+        @@filter_tags.each do |tag|
+          @@filterFilter.get_tagged_photo(tag)
+        end
         status 202
       rescue
         status 400
