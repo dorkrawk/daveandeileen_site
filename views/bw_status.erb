@@ -7,14 +7,18 @@
     <th>username</th>
     <th>name</th>
     <th>url</th>
+    <th>deleting</th>
   </tr>
+<% i = 0 %>
 <% @photos.each do |k, p| %>
-  <tr>
+  <tr <%= "style='background-color: #dffddf'" if i%2 == 0 %>>
     <td><%= p[:id] %></td>
     <td><%= p[:service] %></td>
     <td><%= p[:username] %></td>
     <td><%= p[:name] %></td>
-    <td><a href="<%= p[:photo_url] %>"><%= p[:photo_url] %></a></td>
+    <td><a href="<%= p[:photo_url] %>">[view photo]</a></td>
+    <td><a href="../delete_photo/<%= p[:id] %>" style="color: red">[delete photo #<%= p[:id] %>]</a></td>
   </tr>
+  <% i += 1 %>
 <% end %>
 </table>

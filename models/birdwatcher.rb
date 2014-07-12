@@ -81,4 +81,8 @@ class BirdWatcher
   def get_service_icon(service)
     @service_icons[service] || "fa-camera"
   end
+
+  def delete_photo(id)
+    @db[:photos].where(:id => id).delete
+  end
 end

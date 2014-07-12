@@ -108,6 +108,11 @@ module DaveAndEileen
       erb :bw_status
     end
 
+    get '/delete_photo/:id' do
+      @@birdwatcher.delete_photo(params[:id])
+      redirect to('/bw_status')
+    end
+
     @@the_subtitles = [
                       "are entering the bonds of matrimony and cheese",
                       "are totally getting married",
