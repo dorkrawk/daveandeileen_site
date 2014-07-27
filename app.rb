@@ -135,8 +135,12 @@ module DaveAndEileen
     end
 
     def countdown
-      days = (@@wedding_date - DateTime.now).to_i
-      "#{days} days"
+      days = (@@wedding_date - DateTime.now.to_date).floor
+      if days > 0
+        "in #{days} days"
+      else
+        "today!"
+      end
     end
 
     def countdown_exact
