@@ -149,7 +149,7 @@ module DaveAndEileen
 
     helpers do
       def tweets
-        our_twitters = ["dorkrawk", "leenbeener"]
+        our_twitters = ["dorkrawk", "leentothebeen"]
         twitter = BirdBlender.new(our_twitters, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET'], ENV['TWITTER_OAUTH_TOKEN'], ENV['TWITTER_OAUTH_TOKEN_SECRET'])
         twitter.tweets
       end
